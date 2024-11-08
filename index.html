@@ -1,84 +1,245 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <!-- ===== CSS ===== -->
-        <link rel="stylesheet" href="assets/css/styles.css">
-    
-        <!-- ===== BOX ICONS ===== -->
-        <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Login Form</title>
+    <link href="https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css" rel="stylesheet">
+    <style>
+        /* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
 
-        <title>Responsive Login Form Sign In Sign Up</title>
-    </head>
-    <body>
-        <div class="login">
-            <div class="login__content">
-                <div class="login__img">
-                    <img src="assets/img/img-login.svg" alt="">
-                </div>
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+}
 
-                <div class="login__forms">
-                    <form action="" class="login__registre" id="login-in">
+/* Main Login Container */
+.login {
+    width: 800px;
+    height: 500px;
+    background: #ffffff;
+    border-radius: 15px;
+    display: flex;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+.login__content {
+    display: flex;
+    width: 100%;
+}
+
+/* Left Side Image Section */
+.login__img {
+    width: 45%;
+    background: #f0f0f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.login__img img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Form Section */
+.login__forms {
+    width: 55%;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.login__form-container {
+    display: none;
+}
+
+.login__form-container:target {
+    display: block;
+}
+
+.login__title {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.login__box {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #dcdcdc;
+    padding-bottom: 10px;
+}
+
+.login__icon {
+    font-size: 1.2rem;
+    color: #6a11cb;
+    margin-right: 10px;
+}
+
+.login__input {
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    color: #333;
+    background: transparent;
+}
+
+.login__forgot {
+    display: inline-block;
+    margin: 10px 0;
+    font-size: 0.9rem;
+    color: #6a11cb;
+    text-align: right;
+    text-decoration: none;
+}
+
+.login__button {
+    width: 100%;
+    background: #6a11cb;
+    color: #ffffff;
+    padding: 12px 0;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background 0.3s ease;
+    text-align: center;
+}
+
+.login__button:hover {
+    background: #2575fc;
+}
+
+.login__switch {
+    font-size: 0.9rem;
+    text-align: center;
+    color: #333;
+    margin-top: 10px;
+}
+
+.login__link {
+    color: #6a11cb;
+    text-decoration: none;
+    margin-left: 5px;
+}
+
+.login__link:hover {
+    text-decoration: underline;
+}
+
+/* Social Icons */
+.login__social {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.login__social-icon {
+    font-size: 1.5rem;
+    margin: 0 10px;
+    color: #6a11cb;
+    transition: color 0.3s ease;
+}
+
+.login__social-icon:hover {
+    color: #2575fc;
+}
+        
+    </style>
+</head>
+
+<body>
+    <div class="login">
+        <div class="login__content">
+            <!-- Left Image Section -->
+            <div class="login__img">
+                <!-- Updated image URL here -->
+                <img src="https://assets.onecompiler.app/42rvmbqgk/42xad9ksz/2757111.web" alt="Login Image">
+            </div>
+
+            <!-- Login and Signup Forms Section -->
+            <div class="login__forms">
+                <!-- Sign In Form -->
+                <div class="login__form-container">
+                    <form class="login__form" id="login-in">
                         <h1 class="login__title">Sign In</h1>
-    
+
                         <div class="login__box">
                             <i class='bx bx-user login__icon'></i>
-                            <input type="text" placeholder="Username" class="login__input">
+                            <input type="text" placeholder="Username" class="login__input" required>
                         </div>
-    
+
                         <div class="login__box">
                             <i class='bx bx-lock-alt login__icon'></i>
-                            <input type="password" placeholder="Password" class="login__input">
+                            <input type="password" placeholder="Password" class="login__input" required>
                         </div>
 
                         <a href="#" class="login__forgot">Forgot password?</a>
+                        <button type="submit" class="login__button">Sign In</button>
 
-                        <a href="https://vinay240605.github.io/LifeStyle/" class="login__button">Sign In</a>
-
-                        <div>
-                            <span class="login__account">Don't have an Account ?</span>
-                            <span class="login__signin" id="sign-up">Sign Up</span>
+                        <div class="login__switch">
+                            <span class="login__account">Don't have an Account?</span>
+                            <a href="#login-up" class="login__link">Sign Up</a>
                         </div>
                     </form>
+                </div>
 
-                    <form action="" class="login__create none" id="login-up">
+                <!-- Sign Up Form -->
+                <div class="login__form-container" id="login-up">
+                    <form class="login__form">
                         <h1 class="login__title">Create Account</h1>
-    
+
                         <div class="login__box">
                             <i class='bx bx-user login__icon'></i>
-                            <input type="text" placeholder="Username" class="login__input">
+                            <input type="text" placeholder="Username" class="login__input" required>
                         </div>
-    
+
                         <div class="login__box">
                             <i class='bx bx-at login__icon'></i>
-                            <input type="text" placeholder="Email" class="login__input">
+                            <input type="email" placeholder="Email" class="login__input" required>
                         </div>
 
                         <div class="login__box">
                             <i class='bx bx-lock-alt login__icon'></i>
-                            <input type="password" placeholder="Password" class="login__input">
+                            <input type="password" placeholder="Password" class="login__input" required>
                         </div>
 
-                        <a href="homepage.html" class="login__button">Sign Up</a>
+                        <button type="submit" class="login__button">Sign Up</button>
 
-                        <div>
-                            <span class="login__account">Already have an Account ?</span>
-                            <span class="login__signup" id="sign-in">Sign In</span>
+                        <div class="login__switch">
+                            <span class="login__account">Already have an Account?</span>
+                            <a href="#login-in" class="login__link">Sign In</a>
                         </div>
 
                         <div class="login__social">
-                            <a href="#" class="login__social-icon"><i class='bx bxl-facebook' ></i></a>
-                            <a href="#" class="login__social-icon"><i class='bx bxl-twitter' ></i></a>
-                            <a href="#" class="login__social-icon"><i class='bx bxl-google' ></i></a>
+                            <a href="#" class="login__social-icon"><i class='bx bxl-facebook'></i></a>
+                            <a href="#" class="login__social-icon"><i class='bx bxl-twitter'></i></a>
+                            <a href="#" class="login__social-icon"><i class='bx bxl-google'></i></a>
                         </div>
                     </form>
                 </div>
             </div>
         </div>
+    </div>
+</body>
 
-        <!--===== MAIN JS =====-->
-        <script src="assets/js/main.js"></script>
-    </body>
 </html>
