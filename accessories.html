@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Accessories</title>
+    <style>
+        /* General Styling */              
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        /* Header Section with Image */
+        header {
+            background-image: url('https://i1.lmsin.net/website_images/in/static-pages/lifestyle/tour/desktop-header-ls-tour.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 400px; /* Fixed height for header image */
+            position: relative;
+        }
+
+        /* Text Below the Header Image */
+        .header-text {
+            background-color: black;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 2em;
+        }
+
+        /* Hamburger Menu */
+        .menu-icon {
+            display: none;
+            cursor: pointer;
+            padding: 15px;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+
+        .menu-icon div {
+            width: 35px;
+            height: 5px;
+            background-color: white;
+            margin: 6px 0;
+            transition: 0.4s;
+        }
+
+        /* Navigation Links */
+        .nav-links {
+            display: none;
+            flex-direction: column;
+            position: absolute;
+            top: 80px;
+            right: 0;
+            width: 200px;
+            background-color: #333;
+            padding: 20px 0;
+            z-index: 1;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            padding: 15px;
+            display: block;
+            transition: background-color 0.3s;
+        }
+
+        .nav-links a:hover {
+            background-color: #ff6347;
+        }
+
+        /* Show the nav when the menu is active */
+        .menu-icon.active div:nth-child(1) {
+            transform: rotate(-45deg) translate(-5px, 6px);
+        }
+
+        .menu-icon.active div:nth-child(2) {
+            opacity: 0;
+        }
+
+        .menu-icon.active div:nth-child(3) {
+            transform: rotate(45deg) translate(-5px, -6px);
+        }
+
+        .menu-icon.active + .nav-links {
+            display: flex;
+        }
+
+        /* Desktop Navigation Styling */
+        .desktop-nav {
+            display: flex;
+            justify-content: flex-end;
+            background-color: #333;
+            padding: 10px 20px;
+        }
+
+        .desktop-nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            transition: background-color 0.3s;
+        }
+
+        .desktop-nav a:hover {
+            background-color: #ff6347;
+        }
+
+        /* Accessory Section Styling */
+        .accessory-section {
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .accessory-card {
+            display: inline-block;
+            width: 300px;
+            background-color: white;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .accessory-card:hover {
+            transform: scale(1.05);
+        }
+
+        .accessory-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .shop-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 10px;
+            background-color: #ff6347;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .shop-btn:hover {
+            background-color: #ff9900;
+        }
+
+        /* Media Query for Larger Screens */
+        @media (min-width: 768px) {
+            .menu-icon {
+                display: none; /* Hide the hamburger menu on desktop */
+            }
+
+            .nav-links {
+                display: flex;
+                flex-direction: row;
+                position: static;
+                background-color: transparent;
+                padding: 0;
+                width: auto;
+            }
+
+            .nav-links a {
+                padding: 10px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Hamburger Menu -->
+    <div class="menu-icon" onclick="toggleMenu()">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+    <!-- Navigation Links for Mobile View -->
+    <div class="nav-links">
+        <a href="index.html">Home Page</a>
+        <a href="fashion.html">Fashion</a>
+        <a href="contact.html">Contact</a>
+    </div>
+
+    <!-- Desktop Navigation -->
+    <div class="desktop-nav">
+        <a href="index.html">Home Page</a>
+        <a href="fashion.html">Fashion</a>
+        <a href="contact.html">Contact</a>
+    </div>
+
+    <!-- Header Section with Image -->
+    <header>
+        <!-- The image remains in the background, no need for text here -->
+    </header>
+
+    <!-- Text Below the Header Image -->
+    <div class="header-text">
+        <h1>Top Travel Accessories You Need</h1>
+        <p>Find the best travel accessories for your next adventure and shop the top-rated items from trusted platforms!</p>
+    </div>
+
+    <!-- Accessories Section -->
+    <section class="accessory-section">
+        <h2>Top Travel Accessories You Need</h2>
+
+        <!-- Backpack -->
+        <div class="accessory-card">
+            <img src="https://eikenshop.com/cdn/shop/files/couple-hiking-forest-yellow-eco-friendly-roll-top-hiking-backpack-mero-mero_1800x.jpg?v=1683197256" alt="Backpack">
+            <h3>Backpack</h3>
+            <p>Carry your essentials comfortably with a stylish and durable backpack for your trips.</p>
+            <a href="https://www.flipkart.com/search?q=backpack" target="_blank" class="shop-btn">Shop on Flipkart</a>
+            <a href="https://www.amazon.in/s?k=backpack" target="_blank" class="shop-btn" style="background-color: #ff9900;">Shop on Amazon</a>
+        </div>
+
+        <!-- Sunglasses -->
+        <div class="accessory-card">
+            <img src="https://www.jiomart.com/images/product/original/rvbm2wt4l0/allu-arjun-inspired-uv-protected-round-sunglasses-for-men-and-women-black-product-images-rvbm2wt4l0-4-202205180016.jpg?im=Resize=(500,630)" alt="Sunglasses">
+            <h3>Sunglasses</h3>
+            <p>Protect your eyes in style with these top-rated sunglasses for sunny destinations.</p>
+            <a href="https://www.flipkart.com/search?q=sunglasses" target="_blank" class="shop-btn">Shop on Flipkart</a>
+            <a href="https://www.amazon.in/s?k=sunglasses" target="_blank" class="shop-btn" style="background-color: #ff9900;">Shop on Amazon</a>
+        </div>
+
+        <!-- Toiletry Bag -->
+        <div class="accessory-card">
+            <img src="https://www.nappadori.com/cdn/shop/files/Toiletry-Bags--chennai-railway-_-coconut-wala_1024x.jpg?v=1720594789" alt="Toiletry Bag">
+            <h3>Toiletry Bag</h3>
+            <p>Keep your toiletries organized and easy to access with a travel toiletry bag.</p>
+            <a href="https://www.flipkart.com/search?q=toiletry+bag" target="_blank" class="shop-btn">Shop on Flipkart</a>
+            <a href="https://www.amazon.in/s?k=toiletry+bag" target="_blank" class="shop-btn" style="background-color: #ff9900;">Shop on Amazon</a>
+        </div>
+
+        <!-- Travel Journal -->
+        <div class="accessory-card">
+            <img src="https://cdn.shopify.com/s/files/1/1201/4358/files/IMG_0652.jpg?v=1693266336" alt="Travel Journal">
+            <h3>Travel Journal</h3>
+            <p>Record your memories and experiences with a durable travel journal.</p>
+            <a href="https://www.flipkart.com/search?q=travel+journal" target="_blank" class="shop-btn">Shop on Flipkart</a>
+            <a href="https://www.amazon.in/s?k=travel+journal" target="_blank" class="shop-btn" style="background-color: #ff9900;">Shop on Amazon</a>
+        </div>
+
+        <!-- Travel Adapter -->
+        <div class="accessory-card">
+            <img src="https://www.stuffcool.com/cdn/shop/files/WCJTST20WGRY-SC4.jpg?v=1723887661&width=1000" alt="Travel Adapter">
+            <h3>Travel Adapter</h3>
+            <p>Never worry about charging your devices with a universal travel adapter.</p>
+            <a href="https://www.flipkart.com/search?q=travel+adapter" target="_blank" class="shop-btn">Shop on Flipkart</a>
+            <a href="https://www.amazon.in/s?k=travel+adapter" target="_blank" class="shop-btn" style="background-color: #ff9900;">Shop on Amazon</a>
+        </div>
+    </section>
+
+    <script>
+        // Toggle menu for mobile and desktop
+        function toggleMenu() {
+            var menu = document.querySelector('.menu-icon');
+            var navLinks = document.querySelector('.nav-links');
+            menu.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        }
+    </script>
+
+</body>
+</html>

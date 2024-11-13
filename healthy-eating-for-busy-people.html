@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ultimate Guide to Health Consciousness</title>
+  <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    /* Global Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #a3c4fc, #f0e5ff);
+      color: #333;
+      overflow-x: hidden;
+    }
+
+    h1, h2 {
+      font-family: 'Segoe UI', sans-serif;
+      font-weight: 600;
+      color: #2d2d2d;
+    }
+
+    .main-content {
+      max-width: 1200px;
+      margin: 3rem auto;
+      padding: 2.5rem;
+      background: #fff;
+      border-radius: 20px;
+      box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+    }
+
+    /* Hover effect for the content container */
+    .main-content:hover {
+      box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+      transform: translateY(-10px);
+    }
+
+    h1 {
+      font-size: 3.5rem;
+      text-align: center;
+      background: linear-gradient(45deg, #6a11cb, #2575fc);
+      -webkit-background-clip: text;
+      color: transparent;
+      animation: gradient 2s infinite alternate;
+    }
+
+    @keyframes gradient {
+      0% {
+        background-position: left;
+      }
+      100% {
+        background-position: right;
+      }
+    }
+
+    h2 {
+      font-size: 2.2rem;
+      margin-top: 3rem;
+      color: #2d2d2d;
+    }
+
+    .content-text {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      color: #4b5563;
+      text-align: justify;
+      margin-top: 2rem;
+      padding-bottom: 1rem;
+    }
+
+    /* Image Styling */
+    .image-container {
+      display: flex;
+      justify-content: space-between;
+      gap: 1.5rem;
+      margin-top: 2.5rem;
+      flex-wrap: wrap;
+    }
+
+    .image-container img {
+      width: 48%;
+      border-radius: 15px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+      transition: all 0.4s ease;
+    }
+
+    .image-container img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+    }
+
+    .cta {
+      display: inline-block;
+      padding: 1rem 2rem;
+      background: linear-gradient(45deg, #ff416c, #ff4b2b);
+      color: #fff;
+      font-weight: bold;
+      text-transform: uppercase;
+      font-size: 1.1rem;
+      text-decoration: none;
+      border-radius: 25px;
+      margin-top: 3rem;
+      text-align: center;
+      box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+      transition: all 0.3s ease;
+    }
+
+    .cta:hover {
+      background: linear-gradient(45deg, #ff4b2b, #ff416c);
+      transform: translateY(-5px);
+      box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.3);
+    }
+
+    .section {
+      margin-bottom: 4rem;
+    }
+
+    .section-title {
+      font-size: 1.75rem;
+      font-weight: bold;
+      color: #333;
+      text-align: center;
+      margin-bottom: 2rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    /* Adding some color to specific sections */
+    .section p {
+      color: #555;
+    }
+
+    /* Social proof or user engagement section */
+    .engagement {
+      text-align: center;
+      background-color: #ffd700;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+      margin-top: 3rem;
+    }
+
+    .engagement h2 {
+      font-size: 2rem;
+      color: #1f2937;
+      margin-bottom: 1rem;
+    }
+
+    .engagement p {
+      font-size: 1rem;
+      color: #333;
+    }
+
+    .engagement .cta {
+      background: #38bdf8;
+      padding: 1rem 2rem;
+      color: white;
+      font-weight: 600;
+      text-decoration: none;
+      border-radius: 25px;
+      margin-top: 1.5rem;
+    }
+
+    /* Page transitions for smooth effects */
+    .page-transition {
+      opacity: 0;
+      transition: opacity 0.5s ease-in-out;
+    }
+
+    .page-transition.active {
+      opacity: 1;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .main-content {
+        padding: 1.5rem;
+        margin: 1.5rem;
+      }
+
+      .cta {
+        width: 100%;
+        padding: 1rem;
+      }
+
+      .image-container {
+        flex-direction: column;
+        gap: 1.5rem;
+      }
+
+      .image-container img {
+        width: 100%;
+        margin-top: 1rem;
+      }
+
+      h1 {
+        font-size: 2.5rem;
+      }
+
+      h2 {
+        font-size: 1.8rem;
+      }
+
+      .content-text {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="main-content page-transition active">
+    <h1>Ultimate Guide to Health Consciousness</h1>
+    <div class="content-text">
+      <p>Welcome to our comprehensive guide on health consciousness! This guide will cover various topics related to maintaining a healthy lifestyle, ranging from nutritious eating habits to mental well-being, fitness routines, and more. Whether you're looking to make small changes or dive deep into improving your health, this guide is for you.</p>
+
+      <div class="section">
+        <h2 class="section-title">1. The Basics of Health Consciousness</h2>
+        <p>Health consciousness refers to the awareness and efforts individuals make toward maintaining their physical, mental, and emotional well-being. It involves adopting a lifestyle that prioritizes good nutrition, exercise, mental peace, and positive habits. The goal is to live a balanced life with a focus on sustainable well-being.</p>
+        <div class="image-container">
+          <img src="https://etvbharatimages.akamaized.net/etvbharat/prod-images/768-512-15065533-791-15065533-1650437068513.jpg" alt="Health Consciousness Basics">
+          <img src="https://interpret.la/wp-content/uploads/2022/01/ADVERTISING-Big-brands-are-increasingly-catering-to-health-conscious-consumers-scaled-1.jpeg" alt="Living a Healthy Life">
+        </div>
+      </div>
+
+      <div class="section">
+        <h2 class="section-title">2. Importance of Nutrition in Health</h2>
+        <p>Proper nutrition is the cornerstone of good health. Eating a balanced diet provides the body with the essential nutrients it needs to function properly. This includes carbohydrates for energy, proteins for muscle repair, fats for healthy cells, vitamins and minerals for bodily functions, and water for hydration. A healthy diet also helps prevent chronic diseases such as diabetes, heart disease, and obesity.</p>
+        <div class="image-container">
+          <img src="https://kdahweb-static.kokilabenhospital.com/kdah-2019/tips/1630474430.png" alt="Balanced Diet">
+          <img src="https://beintelligent.in/cdn/shop/articles/Tips_to_stop_hair_loss_and_regrow_hair_naturally_12.png?v=1717442536" alt="Healthy Foods">
+        </div>
+      </div>
+
+      <div class="section">
+        <h2 class="section-title">3. Mental Health and Well-being</h2>
+        <p>Mental health is as important as physical health. It includes emotional, psychological, and social well-being, affecting how we think, feel, and act. Mental well-being can be supported through healthy lifestyle habits such as regular physical activity, stress management, and social connections. Mindfulness practices like meditation and journaling can help improve mental clarity and reduce anxiety.</p>
+        <div class="image-container">
+          <img src="https://media.licdn.com/dms/image/D5612AQEb-JXordRsgw/article-cover_image-shrink_600_2000/0/1684162604875?e=2147483647&v=beta&t=Rutr7x8H6hnFfKawPv2UOwk4YvhfJdXnNri8vGwYNGg" alt="Mental Health">
+          <img src="https://img.jakpost.net/c/2017/08/08/2017_08_08_30760_1502189896._large.jpg" alt="Mindfulness and Mental Health">
+        </div>
+      </div>
+
+      <div class="section">
+        <h2 class="section-title">4. The Role of Exercise</h2>
+        <p>Physical activity is essential for maintaining a healthy body and mind. Exercise helps improve cardiovascular health, strengthen muscles, enhance flexibility, and boost mood through the release of endorphins. Aim for at least 30 minutes of moderate exercise most days of the week to experience the full benefits. Whether it's walking, yoga, cycling, or strength training, movement is key to a healthy lifestyle.</p>
+        <div class="image-container">
+          <img src="https://www.shutterstock.com/image-photo/fitness-couple-celebrating-success-giving-600nw-2411268397.jpg" alt="Exercise Benefits">
+          <img src="https://imgv2-2-f.scribdassets.com/img/word_document/366056529/298x396/129e659817/1?v=1" alt="Fitness and Exercise">
+        </div>
+      </div>
+
+      <div class="cta">Start Your Health Journey Today</div>
+    </div>
+
+    <div class="engagement">
+      <h2>Stay Engaged in Your Health Journey</h2>
+      <p>Join our community of health-conscious individuals! Follow us on social media for daily tips, motivation, and inspiration on how to maintain a healthy and balanced life.</p>
+      <a href="#" class="cta">Join Us Now</a>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accessories & Socks</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<style>
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: #f0f0f0;
+      color: #333;
+    }
+
+    header {
+      background-color: #4caf50;
+      color: white;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      letter-spacing: 1px;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 2rem;
+      padding: 3rem 10%;
+    }
+
+    .product-card {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .product-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    .product-card img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+    }
+
+    .product-card .info {
+      padding: 1rem;
+      text-align: center;
+    }
+
+    .product-card h3 {
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: #333;
+    }
+
+    .product-card p {
+      font-size: 1rem;
+      color: #777;
+      margin: 1rem 0;
+    }
+
+    .product-card .price {
+      font-size: 1.2rem;
+      color: #4caf50;
+    }
+
+    .btn {
+      padding: 0.6rem 1.2rem;
+      background-color: #4caf50;
+      color: white;
+      text-transform: uppercase;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #45a049;
+    }
+
+    footer {
+      background-color: #4caf50;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      position: fixed;
+      width: 100%;
+      bottom: 0;
+    }
+</style>
+<body>
+
+  <header>
+    <h1>Accessories & Socks</h1>
+    <p>Complete your look with trendy accessories and socks</p>
+  </header>
+
+  <div class="container">
+    <div class="product-card">
+      <img src="https://images.unsplash.com/photo-1516728778402-b88a7a14b9b7" alt="Socks">
+      <div class="info">
+        <h3>Cozy Wool Socks</h3>
+        <p>Stay warm and stylish with our collection of cozy wool socks.</p>
+        <p class="price">$9.99</p>
+        <button class="btn">Shop Now</button>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <img src="https://images.unsplash.com/photo-1603282028402-f433748232c7" alt="Accessories">
+      <div class="info">
+        <h3>Trendy Sunglasses</h3>
+        <p>Complete your summer look with these stylish sunglasses.</p>
+        <p class="price">$25.99</p>
+        <button class="btn">Shop Now</button>
+      </div>
+    </div>
+
+    <!-- More Products here -->
+  </div>
+
+  <footer>
+    <p>&copy; 2024 Accessories & Socks Store</p>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Explore the World - Travel Page</title>
+  <style>
+    /* General Styling */
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #fdfdfd, #f0f8ff);
+      color: #333;
+    }
+
+    header {
+      background: linear-gradient(90deg, hwb(197 24% 10%), #f1a668);
+      padding: 30px;
+      text-align: center;
+      color: #fff;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    h1 {
+      font-size: 3em;
+      margin: 0;
+      font-weight: bold;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #333;
+      padding: 12px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    }
+
+    nav a {
+      color: #fff;
+      padding: 12px 20px;
+      text-decoration: none;
+      margin: 0 12px;
+      font-weight: bold;
+      font-size: 1.1em;
+      transition: color 0.3s, background-color 0.3s;
+    }
+
+    nav a:hover {
+      background-color: hwb(197 24% 10%);
+      color: #fff;
+      border-radius: 5px;
+    }
+
+    main {
+      padding: 40px;
+    }
+
+    h2 {
+      font-size: 2em;
+      font-weight: bold;
+      text-align: center;
+      color: #000000;
+      margin-bottom: 30px;
+    }
+
+    /* Featured Destinations Section */
+    .destination {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 25px;
+    }
+
+    .destination-card {
+      width: 320px;
+      background: #fff;
+      border: 2px solid #000000;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .destination-card:hover {
+      transform: scale(1.06);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .destination-card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 10px 10px 0 0;
+    }
+
+    .destination-card p {
+      font-size: 1em;
+      color: #666;
+      padding: 15px;
+    }
+
+    .details {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 15px 15px;
+    }
+
+    .details span {
+      font-weight: bold;
+      color: #4bb0d8;
+    }
+
+    .explore-btn {
+      background: #f1a668;
+      color: #fff;
+      padding: 10px 18px;
+      border-radius: 6px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: background-color 0.3s;
+    }
+
+    .explore-btn:hover {
+      background-color: #1dc4ee;
+    }
+
+    /* Travel Tips Section */
+    .travel-tips {
+      padding: 50px 0;
+      background: #fdfdfd;
+    }
+
+    .tips-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 25px;
+      justify-content: center;
+    }
+
+    .tip-card {
+      background: #fff;
+      border: 2px solid #feb47b;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+      padding: 25px;
+      width: 280px;
+      text-align: center;
+      transition: transform 0.3s;
+    }
+
+    .tip-card:hover {
+      transform: scale(1.06);
+    }
+
+    .tip-card h3 {
+      font-size: 1.3em;
+      color: #ff7e5f;
+      margin-bottom: 15px;
+    }
+
+    .tip-card p {
+      font-size: 1em;
+      color: #555;
+    }
+
+    /* Footer Styling */
+    footer {
+      background: linear-gradient(90deg, hwb(197 24% 10%), #feb47b);
+      color: #fff;
+      text-align: center;
+      padding: 20px 0;
+    }
+
+    footer p {
+      margin: 0;
+      font-size: 0.9em;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header Section -->
+  <header>
+    <h1>Explore the World</h1>
+    <p>Find your next adventure and unforgettable experiences</p>
+  </header>
+
+  <!-- Navigation -->
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="travel trips.html">Travel Tips</a>
+    <a href="#">Gallery</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Featured Destinations Section -->
+    <section>
+      <h2>Featured Destinations</h2>
+      <div class="destination">
+        <div class="destination-card">
+          <img src="https://i.pinimg.com/564x/eb/8a/01/eb8a0172bb64a0e80bf5aaad82fe9534.jpg" alt="Beach">
+          <p>Relax and unwind at breathtaking beaches with crystal-clear waters and golden sands.</p>
+          <div class="details">
+            <span>Beach Paradise</span>
+            <a href="https://www.thomascook.in/blog/international-holidays/lakshadweep-vs-maldives-which-of-the-two-is-the-best-coastal-destination-for-2024/" class="explore-btn">Explore</a>
+          </div>
+        </div>
+        <div class="destination-card">
+          <img src="https://www.blvd-club.ch/application/files/3215/6415/0778/Mountain_Escape.jpg" alt="Mountain">
+          <p>Embrace adventure with thrilling mountain hikes and scenic views.</p>
+          <div class="details">
+            <span>Mountain Escapes</span>
+            <a href="https://mountain-escapes.com/" class="explore-btn">Explore</a>
+          </div>
+        </div>
+        <div class="destination-card">
+          <img src="https://uniacco.com/blog/wp-content/uploads/2020/10/hong-kong-1990268_640.jpg" alt="City">
+          <p>Discover vibrant cityscapes filled with cultural landmarks and unique experiences.</p>
+          <div class="details">
+            <span>City Life</span>
+            <a href="https://www.steppestravel.com/blog/hyderabad-living-history/" class="explore-btn">Explore</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Travel Tips Section -->
+    <section class="travel-tips">
+      <h2>Travel Tips & Guides</h2>
+      <div class="tips-container">
+        <div class="tip-card">
+          <h3>Packing Essentials</h3>
+          <p>Learn to pack light and efficiently for every trip.</p>
+        </div>
+        <div class="tip-card">
+          <h3>Budget-Friendly Tips</h3>
+          <p>Get tips on saving without missing out on amazing experiences.</p>
+        </div>
+        <div class="tip-card">
+          <h3>Local Etiquette</h3>
+          <p>Respect and enjoy cultures worldwide by understanding their customs.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 Explore the World. All rights reserved.</p>
+  </footer>
+</body>
+</html>

